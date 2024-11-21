@@ -1,8 +1,11 @@
-
-<img src="{{ urls.JoinPath .Page.Permalink .Destination | safeURL }}"
+{{ $classRegex := "#(right|center|left)" }}
+{{ $definedClass := index (findRE $classRegex .Destination) 0 }}
+{{ $filename := replace .Destination $definedClass "" }}
+{{ $class := replace $definedClass "#" "" }}
+<img src="{{ urls.JoinPath .Page.Permalink $filename | safeURL | absURL }}"
   {{- with .Text }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
+  {{- with $class }} class="{{ . }}" {{end -}}
 >
-{{ debug.Dump .Destination }}
 {{- /* chomp trailing newline */ -}}
 
