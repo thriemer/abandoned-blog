@@ -1,0 +1,8 @@
+<div class="hoverLinkGroup">
+<a class="hoverLink" href="{{ .Destination | safeURL }}" {{- with .Title }} title="{{ . }}"{{ end -}} >
+  {{- with .Text }}{{ . }}{{ end -}}
+</a>
+<div class = "hoverDetail">Ich bin der Hoverer</div>
+</div>
+{{- /* chomp trailing newline */ -}}
+

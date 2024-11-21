@@ -1,0 +1,21 @@
+<!-- tex -->
+{{ $inline := "" }}
+{{- if eq (.Get 0) "inline" -}}
+{{ $inline = "&inline=true" }}
+<!-- {{.Inner}} -->
+{{- end -}}
+{{ $url := "http://localhost:4567/" }}
+{{ $opts := dict
+"method" "post"
+"body" .Inner
+}}
+{{ with resources.GetRemote $url $opts }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $data := . | transform.Unmarshal }}
+{{ $data | safeHTML }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %q" $url }}
+{{ end }}
