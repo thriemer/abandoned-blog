@@ -1,4 +1,4 @@
-<img src="{{ urls.JoinPath .Page.Path .Pag.Destination | safeURL | absURL }}"
+<img src="{{ urls.JoinPath .Page.Path .Destination | safeURL | absURL }}"
   {{- with .Text }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
 >
