@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://thriemer.github.io/abandoned-blog'
 languageCode = 'en-us'
 title = 'Abondoned Blog'
 theme = 'abandoned'
