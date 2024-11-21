@@ -1,0 +1,8 @@
+
+<img src="{{ urls.JoinPath .Page.Permalink .Destination | safeURL }}"
+  {{- with .Text }} alt="{{ . }}"{{ end -}}
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+>
+{{ debug.Dump .Destination }}
+{{- /* chomp trailing newline */ -}}
+
