@@ -52,7 +52,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Start Latex Compile Server
-        run: npm start& && echo "${{ steps.pages.outputs.base_url }}/"
+        run: npm start&
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
