@@ -1,4 +1,4 @@
-<img src="{{ print .Page.Path "/" .Destination | safeURL }}"
+<img src="{{ print .Page.Path "/" .Destination | safeURL | absURL }}"
   {{- with .Text }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
 >
