@@ -22,14 +22,19 @@ async function fetchSummary(link) {
   return summary;
 }
 
+const isExternalURL = (url) => new URL(url).origin !== location.origin;
+
 window.addEventListener("load", async function () {
   var hoverLinks = document.querySelectorAll(".hoverLinkGroup");
 
   hoverLinks.forEach(async (linkDiv) => {
     var hoverDiv = linkDiv.querySelector(".hoverDetail");
     var link = linkDiv.querySelector("a");
-    var summary = await fetchSummary(link);
-    hoverDiv.innerHTML = summary.innerHTML;
-    console.log(summary.innerHTML);
+    if (isExternalURL(link.href)) {
+      hoverDiv.remove();
+    } else {
+      var summary = await fetchSummary(link);
+      hoverDiv.innerHTML = summary.innerHTML;
+    }
   });
 });

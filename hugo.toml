@@ -3,16 +3,19 @@ languageCode = 'en-us'
 title = 'Abondoned Blog'
 theme = 'abandoned'
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
-[params]
-  math = true
+
+[[menus.main]]
+name = 'Data Science'
+pageRef = '/datascience'
+weight = 30
+
+
+[[menus.main]]
+name = 'Trading Bot'
+pageRef = '/tradingbot'
+weight = 30
+
+
 
 [caches]
   [caches.assets]
