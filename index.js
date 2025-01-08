@@ -29,10 +29,11 @@ async function initializeMathJax() {
 async function tex2svg(tex) {
   await initializeMathJax(); // Ensure MathJax is initialized
   console.log("Received Tex: " + tex);
+  without_doller = tex.replaceAll("$", "").trim();
   try {
-    const svg = MathJax.tex2svg(tex, { display: true });
+    const svg = MathJax.tex2svg(without_doller, { display: true });
+    console.log(without_doller);
     const svgString = MathJax.startup.adaptor.innerHTML(svg);
-    console.log("Returning svg: " + svgString);
     return svgString;
   } catch (err) {
     console.error(err.message);
