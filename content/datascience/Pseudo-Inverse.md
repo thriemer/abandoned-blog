@@ -9,7 +9,7 @@ The pseudo inverse {{< tex >}}A^+ \in \mathbb{R}^{m\times n} {{< /tex >}}, also 
 A^+ = (A^TA)^{-1}A^T
 {{< /tex >}}
 
-<!---more--->
+<!--more-->
 
 [Wikipedia Article with all the properties](https://en.wikipedia.org/wiki/Moore–Penrose_inverse)
 [Other Blog](https://nhigham.com/2023/07/25/what-is-the-pseudoinverse-of-a-matrix/)

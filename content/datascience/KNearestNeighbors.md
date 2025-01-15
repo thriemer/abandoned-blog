@@ -2,6 +2,7 @@
 title = 'K Nearest Neighbors'
 date = 2025-01-07T13:16:10+01:00
 draft = false
+parent = 'datascience'
 +++
 
 K-Nearest-Neighbors is a non-parametric model and can be used for clustering and regression.

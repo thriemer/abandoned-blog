@@ -3,19 +3,19 @@ languageCode = 'en-us'
 title = 'Abondoned Blog'
 theme = 'abandoned'
 
+sectionPagesMenu = 'main'
 
-[[menus.main]]
-name = 'Data Science'
-pageRef = '/datascience'
-weight = 30
-
-
-[[menus.main]]
-name = 'Trading Bot'
-pageRef = '/tradingbot'
-weight = 30
-
-
+[markup]
+  [markup.goldmark]
+    duplicateResourceFiles = false
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      linkifyProtocol = 'https'
+      strikethrough = true
+      table = true
+      taskList = true
 
 [caches]
   [caches.assets]

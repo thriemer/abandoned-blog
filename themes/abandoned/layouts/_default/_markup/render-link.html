@@ -1,8 +1,15 @@
-<div class="hoverLinkGroup">
-<a class="hoverLink" href="{{ .Destination | safeURL }}" {{- with .Title }} title="{{ . }}"{{ end -}} >
-  {{- with .Text }}{{ . }}{{ end -}}
-</a>
-<div class = "hoverDetail">Ich bin der Hoverer</div>
-</div>
+{{ $isRemote := strings.HasPrefix .Destination "http" }}
+{{- if $isRemote -}}
+  <a href = "{{ .Destination | safeURL}}" {{- with .Title }} title="{{ . }}"{{ end -}} >
+    {{- with .Text }}{{ . }}{{ end -}}
+  </a>
+{{ else }}
+  <div class="hoverLinkGroup">
+    <a class="hoverLink" href="{{ (.Page.GetPage .Destination).RelPermalink | safeURL }}" {{- with .Title }} title="{{ . }}"{{ end -}} >
+      {{- with .Text }}{{ . }}{{ end -}}
+    </a>
+    <div class = "hoverDetail">Ich bin der Hoverer</div>
+  </div>
+{{- end -}}
 {{- /* chomp trailing newline */ -}}
 

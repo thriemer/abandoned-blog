@@ -13,7 +13,7 @@ draft = false
 | Trace                 | Sum of the diagonal elements                                                                                               |
 | Frobinius Norm        | Is the square root of the sum of the squared matrix elements                                                               |
 
-<!---more--->
+<!--more-->
 
 # Transpose
 
