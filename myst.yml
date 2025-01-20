@@ -1,0 +1,19 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: d552b482-71bc-40f8-b626-e14a9b57fba3
+  title: Abandoned Blog
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/thriemer/abandoned-blog
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  url: https://thriemer.github.io/abandoned-blog/
+  nav:
+  options:
+    hide_footer_links: true
+    logo_text: Abandoned Blog
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

@@ -17,11 +17,11 @@ draft = false
 
 # Transpose
 
-Formally the transpose is defined as {{<tex >}}$[A^T]_{ij}=[A]_{ji}${{</tex >}}.
+Formally the transpose is defined as $[A^T]_{ij}=[A]_{ji}$.
 
 There are a number of properties for involving transposed matrices:
 
-{{<tex >}}$
+$$
 \begin{align}
     (A^T)^T &= A \\
     (A+B)^T &= A^T + B^T \\
@@ -30,11 +30,11 @@ There are a number of properties for involving transposed matrices:
     |A^T| &= |A| \\
     (A^T)^{-1} &= (A^{-1})^T
 \end{align}
-${{</tex >}}
+$$
 
-If A only has real entries, then {{<tex >}}$A^TA${{</tex >}} is a positive semidefinite matrix.
+If A only has real entries, then $A^TA$ is a positive semidefinite matrix.
 
-If A is an {{<tex >}}$m\times n${{</tex >}} matrix then {{<tex >}}$AA^T \in m\times m${{</tex >}} and {{<tex >}}$A^TA \in n\times n${{</tex >}}. Further these matrices are symmetric matrices.
+If A is an $m\times n$ matrix then $AA^T \in m\times m$ and $A^TA \in n\times n$. Further these matrices are symmetric matrices.
 
 # Inverse
 
@@ -42,7 +42,7 @@ The inverse only exists for square matrices and only if the matrix has full rank
 
 There are a number of properties for invertible matrices:
 
-{{<tex >}}$
+$$
 \begin{align}
 A\cdot A^{-1} &= A^{-1} \cdot A = I \\
 I^{-1} &= I \\
@@ -55,12 +55,12 @@ I^{-1} &= I \\
 rank(A^{-1}) &= rank(A) \\
 |A^{-1}| &= |A|^{-1} \\
 \end{align}
-${{</tex >}}
+$$
 
-If {{<tex >}}$\lambda${{</tex >}} is an eigenvalue of A then {{<tex >}}$\lambda^{-1}${{</tex >}} is an eigenvalue of {{<tex >}}$A^{-1}${{</tex >}}
+If $$\lambda$$ is an eigenvalue of A then $\lambda^{-1}$ is an eigenvalue of $A^{-1}$
 
 The inverse can be calculated with the Gauß-Jordan-Algorithm.
 
 # Frobinius Norm
 
-{{<tex >}}$||A||_F = \sqrt{\sum_{i,j}A_{ij}^2}${{</tex >}}
+$$||A||_F = \sqrt{\sum_{i,j}A_{ij}^2}$

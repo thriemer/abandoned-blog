@@ -4,10 +4,11 @@ date = 2024-11-27T14:02:16+01:00
 draft = false 
 +++
 
-The pseudo inverse {{< tex >}}A^+ \in \mathbb{R}^{m\times n} {{< /tex >}}, also known as Moore-Penrose inverse, exists for any matrix A and is calculated like this:
-{{< tex >}}
+The pseudo inverse $A^+ \in \mathbb{R}^{m\times n}$, also known as Moore-Penrose inverse, exists for any matrix A and is calculated like this:
+
+$$
 A^+ = (A^TA)^{-1}A^T
-{{< /tex >}}
+$$
 
 <!--more-->
 
